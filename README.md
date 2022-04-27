@@ -1,47 +1,57 @@
 # linux-cmds
 
- Copy Files over servers 
+#### Copy Files over servers 
 
 ``` bash
 scp -r <file> user@<new_server_ip>:<dest_path_path>
 
 ```
 
-
 __________________________________________________________________________________________________
 
-Host file location windows
+#### Host file location windows
 
 ``` bash
 C:\Windows\System32\drivers\etc\hosts
 ```
 __________________________________________________________________________________________________
-
- open the ports in the firewall and iptables
+#### Host file location linux
 
 ``` bash
-firewall-cmd --zone=public --permanent --add-port 9102/tcp
+/etc/hosts
+```
+
+__________________________________________________________________________________________________
+
+#### Check the os linux
+
+``` bash
+cat /etc/os-release
+```
+__________________________________________________________________________________________________
+
+ #### Open the ports in the firewall and iptables
+
+``` bash
+firewall-cmd --zone=public --permanent --add-port {port}/tcp
 firewal-cmd --reload
 ```
 __________________________________________________________________________________________________
 
-
-start the service for system reboot 
+#### Start the service for system reboot 
 ``` bash
 systemctl enable <Service Name>
 ```
 __________________________________________________________________________________________________
 
-
-Vim seach and replace all
+#### Vim seach and replace all
 ``` bash
 :%s/foo/bar
 :%s/foo/bar/gc
 ```
 __________________________________________________________________________________________________
 
-
- IBM Cloud Password 
+ #### IBM Cloud Password 
 
 ``` bash
 ibmcloud login --sso
@@ -52,7 +62,7 @@ ibmcloud is instance-initialization-values <INSTANCE_ID> --private-key @<PRIVATE
 ```
 _______________________________________________________________________________________________
 
-  Git clone in specific branch 
+ #### Git clone in specific branch 
 
 
 ``` bash
@@ -60,7 +70,7 @@ git clone -b <branch> <remote_repo>
 ```
 _______________________________________________________________________________________________
 
- fetch the file from the sftp server 
+ #### Fetch the file from the sftp server 
 
 ``` bash
 
@@ -71,7 +81,7 @@ expl - sftp igor@10.204.68.51:/mnt/sftp_share/test.txt
 
 _________________________________________________________________________________________________
 
-JQ for terminal
+#### JQ for terminal
 
 
 for fetch the values from the JSON file using terminal 
@@ -84,7 +94,7 @@ jq -r '.data.id' file.json
 ```
 _________________________________________________________________________________________________
 
- lsscsi Server commands
+ #### lsscsi Server commands
 
 ``` bash
 > sg_map -i
@@ -162,7 +172,7 @@ ________________________________________________________________________________
 _______________________________________________________________________________________________
 
 
-You have multiple ways to set : as the separator:
+#### You have multiple ways to set : as the separator:
 ``` bash
 awk -F: '{print $1}'
 
@@ -174,15 +184,14 @@ awk 'BEGIN{FS=":"} {print $1}'
 ```
 _______________________________________________________________________________________________
 
-
-Unmount busy device forcefully
+#### Unmount busy device forcefully
 ``` bash
 umount -l /PATH/OF/BUSY-DEVICE
 umount -f /PATH/OF/BUSY-NFS (NETWORK-FILE-SYSTEM)
 ```
 _______________________________________________________________________________________________
 
-check the architecture of linux
+#### Check the architecture of linux
 
 ``` bash
 arch
@@ -190,6 +199,9 @@ echo $(arch)
 ```
 _______________________________________________________________________________________________
 
+#### Color schemes for terminal
+
+> you must git the `-e` with echo to see the color changes
  ``` bash
  
 #!/bin/bash
@@ -216,5 +228,34 @@ echo -e "The color is: ${cyan}cyan${clear}!"
 echo -e '\033[0;31m Nitin \033[0m'
  
  ```
+_______________________________________________________________________________________________
 
+#### Getting time in bash using the diffent styles
 
+``` bash
+Parameter
+Output
+date +”%m/%d/%Y”
+03/25/2019
+date +”%d-%b-%Y”
+25-Mar-2019
+date +”%Y %b %m”
+2019 Mar 25
+date +”%H:%M”
+14:40
+date +”%I:%M %p”
+02:40 PM
+date +”%H:%M:%S”
+14:40:32
+date +”%I:%M:%S %p”
+02:40:32 PM
+date +”%m/%d/%Y %H:%M”
+03/25/2019 14:40
+date +”%A, %m %d %Y %H:%M”
+Monday, 03 25 2019 14:40
+date +”%A, %b %d, %Y %I:%M %p”
+Monday, Mar 25, 2019 02:40 PM
+date +”%A, %b %d, %Y %H:%M:%S”
+Monday, Mar 25, 2019 14:40:32
+
+```
