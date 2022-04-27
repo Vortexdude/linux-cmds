@@ -2,69 +2,72 @@
 
  Copy Files over servers 
 
- > scp -r <file> user@<new_server_ip>:<dest_path_path>
+``` bash
+scp -r <file> user@<new_server_ip>:<dest_path_path>
+
+```
 
 
 __________________________________________________________________________________________________
 
 Host file location windows
 
-
-> C:\Windows\System32\drivers\etc\hosts
-
+``` bash
+C:\Windows\System32\drivers\etc\hosts
+```
 __________________________________________________________________________________________________
 
  open the ports in the firewall and iptables
 
-
-> firewall-cmd --zone=public --permanent --add-port 9102/tcp
-> firewal-cmd --reload
-
+``` bash
+firewall-cmd --zone=public --permanent --add-port 9102/tcp
+firewal-cmd --reload
+```
 __________________________________________________________________________________________________
 
 
 start the service for system reboot 
-
-> systemctl enable <Service Name>
-
+``` bash
+systemctl enable <Service Name>
+```
 __________________________________________________________________________________________________
 
 
 Vim seach and replace all
-  
-> :%s/foo/bar
-> :%s/foo/bar/gc
-
+``` bash
+:%s/foo/bar
+:%s/foo/bar/gc
+```
 __________________________________________________________________________________________________
 
 
  IBM Cloud Password 
 
+``` bash
+ibmcloud login --sso
 
-> ibmcloud login --sso
+ibmcloud plugin install vpc-infrastructure
 
-> ibmcloud plugin install vpc-infrastructure
-
-> ibmcloud is instance-initialization-values <INSTANCE_ID> --private-key @<PRIVATE_KEY>
-
+ibmcloud is instance-initialization-values <INSTANCE_ID> --private-key @<PRIVATE_KEY>
+```
 _______________________________________________________________________________________________
 
   Git clone in specific branch 
 
 
-
-> git clone -b <branch> <remote_repo>
-
+``` bash
+git clone -b <branch> <remote_repo>
+```
 _______________________________________________________________________________________________
 
  fetch the file from the sftp server 
 
+``` bash
 
+sftp {user}@{ip}:{file_location}
 
-> sftp {user}@{ip}:{file_location}
-
-> expl - sftp igor@10.204.68.51:/mnt/sftp_share/test.txt
-
+expl - sftp igor@10.204.68.51:/mnt/sftp_share/test.txt
+```
 
 _________________________________________________________________________________________________
 
@@ -72,18 +75,18 @@ JQ for terminal
 
 
 for fetch the values from the JSON file using terminal 
-
->  jq '.data.id' file.json
+``` bash
+jq '.data.id' file.json
 
 use -r for remove the double quotes
 
->  jq -r '.data.id' file.json
-
+jq -r '.data.id' file.json
+```
 _________________________________________________________________________________________________
 
  lsscsi Server commands
 
-
+``` bash
 > sg_map -i
 
 1. To list SCSi devices:
@@ -154,42 +157,64 @@ ________________________________________________________________________________
 
 > lsscsi -y
 > lsscsi --sysfsroot=PATH
-
+```
 
 _______________________________________________________________________________________________
 
 
 You have multiple ways to set : as the separator:
+``` bash
+awk -F: '{print $1}'
 
-> awk -F: '{print $1}'
+awk -v FS=: '{print $1}'
 
-> awk -v FS=: '{print $1}'
+awk '{print $1}' FS=:
 
-> awk '{print $1}' FS=:
-
-> awk 'BEGIN{FS=":"} {print $1}'
-
+awk 'BEGIN{FS=":"} {print $1}'
+```
 _______________________________________________________________________________________________
 
 
 Unmount busy device forcefully
-
-
-> umount -l /PATH/OF/BUSY-DEVICE
-> umount -f /PATH/OF/BUSY-NFS (NETWORK-FILE-SYSTEM)
-
+``` bash
+umount -l /PATH/OF/BUSY-DEVICE
+umount -f /PATH/OF/BUSY-NFS (NETWORK-FILE-SYSTEM)
+```
 _______________________________________________________________________________________________
 
 check the architecture of linux
 
-
-> arch
-
-OR
-
-> echo $(arch)
-
+``` bash
+arch
+echo $(arch)
+```
 _______________________________________________________________________________________________
 
+ ``` bash
+ 
+#!/bin/bash
+
+# Color variables
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+# Clear the color after that
+clear='\033[0m'
+
+# Examples
+
+echo -e "The color is: ${red}red${clear}!"
+echo -e "The color is: ${green}green${clear}!"
+echo -e "The color is: ${yellow}yellow${clear}!"
+echo -e "The color is: ${blue}blue${clear}!"
+echo -e "The color is: ${magenta}magenta${clear}!"
+echo -e "The color is: ${cyan}cyan${clear}!"
+
+echo -e '\033[0;31m Nitin \033[0m'
+ 
+ ```
 
 
