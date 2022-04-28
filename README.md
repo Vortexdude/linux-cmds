@@ -1,5 +1,14 @@
 # linux-cmds
 
+__________________________________________________________________________________________________
+#### Git clone with ssh Key
+
+``` bash
+ssh-agent bash -c 'ssh-add /your-key-path; git clone git@github.com:user/project.git'
+```
+
+__________________________________________________________________________________________________
+
 #### Copy Files over servers 
 
 ``` bash
