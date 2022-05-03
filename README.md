@@ -49,13 +49,30 @@ disown -a && exit
 ```
 __________________________________________________________________________________________________
 
-
+#### Clean the output with no errors
+``` bash
+command 2>/dev/null
+```
+Here `2` difines the standed erors wich are redirected to the `/dev/null` drectory this is file where all the data will be lost so that the erros are not apprearing on the terminal <br/>
+you can use this with any commands where you dont want to get any type of errors this is extremly useful in automation where you dont want to get the errors on the terminal
+__________________________________________________________________________________________________
 #### Count the result
 
 ``` bash
 ls | grep .mp3 | wc -l
 ```
+__________________________________________________________________________________________________
 
+#### redirect or append the standerd output into a file
+
+for redirect the standedr output
+```bash
+ls >log.txt
+```
+for append the standerd output
+``` bash
+ls >>log.sh
+```
 __________________________________________________________________________________________________
 #### Git clone with ssh Key
 
@@ -116,16 +133,6 @@ ________________________________________________________________________________
 ```
 __________________________________________________________________________________________________
 
- #### IBM Cloud Password 
-
-``` bash
-ibmcloud login --sso
-
-ibmcloud plugin install vpc-infrastructure
-
-ibmcloud is instance-initialization-values <INSTANCE_ID> --private-key @<PRIVATE_KEY>
-```
-_______________________________________________________________________________________________
 
  #### Git clone in specific branch 
 
@@ -157,83 +164,6 @@ use -r for remove the double quotes
 
 jq -r '.data.id' file.json
 ```
-_________________________________________________________________________________________________
-
- #### lsscsi Server commands
-
-``` bash
-> sg_map -i
-
-1. To list SCSi devices:
-
-> lsscsi
-
-2. To get the classic output:
-
-> lsscsi -c
-> lsscsi --classic
-
-3. To get the device name the device node major and minor numbers:
-
-> lsscsi -d
-> lsscsi --device
-
-4. To output the scsi generic device file name:
-
-> lsscsi -g
-> lsscsi --generic
-
-5. To get the help:
-
-> lsscsi -h
-> lsscsi --help
-
-6. To list the SCSI hosts currently attached to the system.
-
-> lsscsi -H
-> lsscsi --hosts
-
-7. To Use linux default algorithm for naming devices:
-
-> lsscsi -k
-> lsscsi --kname
-
-8. To output additional information in pairs:
-
-> lscsci -L
-> lscsci --list
-
-9. To output additional information for each SCSI device:
-
-> lsscsi -l
-> lsscsi --long
-
-10. To output additional data integrity (protection) information:
-
-> lsscsi -p
-> lsscsi --protection
-
-11. To output transport information:
-
-> lsscsi -t
-> lsscsi --transport
-
-12. To get the verbose info:
-
-> lsscsi -v
-> lsscsi --verbose
-
-13. To get the version:
-
-> lsscsi -V
-> lsscsi --version
-
-14. To assumes sysfs is mounted at PATH instead of the default /sys:
-
-> lsscsi -y
-> lsscsi --sysfsroot=PATH
-```
-
 _______________________________________________________________________________________________
 
 
@@ -324,3 +254,14 @@ date +”%A, %b %d, %Y %H:%M:%S”
 Monday, Mar 25, 2019 14:40:32
 
 ```
+
+ #### IBM Cloud Dcrypt Password  with ssh key
+
+``` bash
+ibmcloud login --sso
+
+ibmcloud plugin install vpc-infrastructure
+
+ibmcloud is instance-initialization-values <INSTANCE_ID> --private-key @<PRIVATE_KEY>
+```
+_______________________________________________________________________________________________
