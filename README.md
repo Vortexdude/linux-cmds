@@ -30,6 +30,26 @@ sudo !! ps
 
 __________________________________________________________________________________________________
 
+#### fix a really long commd with text editor 
+
+```bash
+fc
+```
+__________________________________________________________________________________________________
+
+#### Create folder structure
+``` bash
+mkdir -p /folder/{sub1,sub2}/{sub1,sub2,sub3}
+```
+Here `-p` used for creating parent directories if dosen`t exist 
+__________________________________________________________________________________________________
+#### exit the terminal but leave all procces runnig
+``` bash
+disown -a && exit
+```
+__________________________________________________________________________________________________
+
+
 #### Count the result
 
 ``` bash
