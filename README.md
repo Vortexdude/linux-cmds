@@ -1,5 +1,11 @@
 # linux-cmds
 
+#### copy seleted files with ls,cp and grep
+
+```bash
+ls | grep .mp3 | xargs -I '{}' cp '{}' /home/user
+```
+
 __________________________________________________________________________________________________
 #### Git clone with ssh Key
 
