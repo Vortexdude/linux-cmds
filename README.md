@@ -7,8 +7,13 @@ ________________________________________________________________________________
 ```bash
 ls | grep .mp3 | xargs -I '{}' cp '{}' /home/user
 ```
-here `.mp3` is the search term you can specify `date` or `name` and `/home/user` is the paste location
+Here `.mp3` is the search term you can specify `date` or `name` and `/home/user` is the paste location
+you can also use for other opearions like `moving` or `deleing` the files
 
+```bash
+ls | grep .mp3 | xargs -I '{}' rm -rf '{}' /home/user
+
+```
 __________________________________________________________________________________________________
 
 #### Run the previous command with sudo previlage
