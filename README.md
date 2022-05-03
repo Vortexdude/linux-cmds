@@ -1,9 +1,34 @@
 # linux-cmds
 
-#### copy seleted files with ls,cp and grep
+__________________________________________________________________________________________________
+
+#### copy serched files with ls,cp and grep command
 
 ```bash
 ls | grep .mp3 | xargs -I '{}' cp '{}' /home/user
+```
+here `.mp3` is the search term you can specify `date` or `name` and `/home/user` is the paste location
+
+__________________________________________________________________________________________________
+
+#### Run the previous command with sudo previlage
+``` bash
+sudo !!
+```
+here `!!` is the operator which is used for pick up the last command you enterd
+also you can make this command as dynamic as you want like this
+
+```
+docker
+sudo !! ps
+```
+
+__________________________________________________________________________________________________
+
+#### Count the result
+
+``` bash
+ls | grep .mp3 | wc -l
 ```
 
 __________________________________________________________________________________________________
