@@ -73,6 +73,16 @@ for append the standerd output
 ``` bash
 ls >>log.txt
 ```
+
+__________________________________________________________________________________________________
+
+##### Generate hashed password with openssh
+
+``` bash
+openssl passwrd -1 -salt name password
+```
+Where `name` is apeended on the hashed form and `password` is actual password
+
 __________________________________________________________________________________________________
 #### Git clone with ssh Key
 
