@@ -7,8 +7,7 @@ ________________________________________________________________________________
 ```bash
 ls | grep .mp3 | xargs -I '{}' cp '{}' /home/user
 ```
-Here `.mp3` is the search term you can specify `date` or `name` and `/home/user` is the paste location
-you can also use for other opearions like `moving` or `deleing` the files
+> Here `.mp3` is the search term you can specify `date` or `name` and `/home/user` is the paste location you can also use for other opearions like `moving` or `deleing` the files
 
 ```bash
 ls | grep .mp3 | xargs -I '{}' rm -rf '{}' /home/user
@@ -20,14 +19,12 @@ ________________________________________________________________________________
 ``` bash
 sudo !!
 ```
-here `!!` is the operator which is used for pick up the last command you enterd
-also you can make this command as dynamic as you want like this
-
+> Here `!!` is the operator which is used for pick up the last command you enterd also you can make this command as dynamic as you want like this
+> !! stands for fetch the previous command
 ```
 docker
 sudo !! ps
 ```
-
 __________________________________________________________________________________________________
 
 #### Fix a really long commd with text editor {last command}
@@ -41,7 +38,7 @@ ________________________________________________________________________________
 ``` bash
 mkdir -p /folder/{sub1,sub2}/{sub1,sub2,sub3}
 ```
-Here `-p` used for creating parent directories if dosen`t exist 
+> Here `-p` used for creating parent directories if dosen`t exist 
 
 __________________________________________________________________________________________________
 
@@ -51,12 +48,22 @@ disown -a && exit
 ```
 __________________________________________________________________________________________________
 
+Mount the nfs server
+``` bash
+sudo apt update -y && sudo apt install nfs-common
+mkdir -p /mnt/nfs
+mount -t nfs 10.0.0.0:/mnt /mnt/nfs
+
+```
+> Here `10.0.0.0` is the ip that you have to mount and `/mnt` is the directory that is shared in that server and `/mnt/nfs` is the local directory 
+__________________________________________________________________________________________________
+
 #### Clean the output with no errors
 ``` bash
 command 2>/dev/null
 ```
-Here `2` difines the standed erors wich are redirected to the `/dev/null` drectory this is file where all the data will be lost so that the erros are not apprearing on the terminal <br/>
-you can use this with any commands where you dont want to get any type of errors this is extremly useful in automation where you dont want to get the errors on the terminal
+> Here `2` difines the standed erors wich are redirected to the `/dev/null` drectory this is file where all the data will be lost so that the erros are not apprearing on the terminal <br/>
+> you can use this with any commands where you dont want to get any type of errors this is extremly useful in automation where you dont want to get the errors on the terminal
 __________________________________________________________________________________________________
 #### Count the result
 
@@ -83,7 +90,7 @@ ________________________________________________________________________________
 ``` bash
 openssl passwrd -1 -salt name password
 ```
-Where `name` is apeended on the hashed form and `password` is actual password
+> Where `name` is apeended on the hashed form and `password` is actual password
 
 __________________________________________________________________________________________________
 #### Git clone with ssh Key
@@ -208,7 +215,7 @@ ________________________________________________________________________________
 
 #### Color schemes for terminal
 
-> you must git the `-e` with echo to see the color changes
+> you must add the `-e` with echo to see the color changes
  ``` bash
  
 #!/bin/bash
