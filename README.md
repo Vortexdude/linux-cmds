@@ -42,8 +42,10 @@ ________________________________________________________________________________
 mkdir -p /folder/{sub1,sub2}/{sub1,sub2,sub3}
 ```
 Here `-p` used for creating parent directories if dosen`t exist 
+
 __________________________________________________________________________________________________
-#### exit the terminal but leave all procces runnig
+
+#### Exit the terminal but leave all procces runnig
 ``` bash
 disown -a && exit
 ```
@@ -76,7 +78,7 @@ ls >>log.txt
 
 __________________________________________________________________________________________________
 
-##### Generate hashed password with openssh
+#### Generate hashed password with openssh
 
 ``` bash
 openssl passwrd -1 -salt name password
