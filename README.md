@@ -48,9 +48,9 @@ disown -a && exit
 ```
 __________________________________________________________________________________________________
 
-Mount the nfs server
+#### Mount the nfs server
 ``` bash
-sudo apt update -y && sudo apt install nfs-common
+sudo apt update -y && sudo apt install nfs-common -y
 mkdir -p /mnt/nfs
 mount -t nfs 10.0.0.0:/mnt /mnt/nfs
 
