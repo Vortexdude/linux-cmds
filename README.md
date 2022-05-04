@@ -30,7 +30,7 @@ sudo !! ps
 
 __________________________________________________________________________________________________
 
-#### fix a really long commd with text editor 
+#### Fix a really long commd with text editor {last command}
 
 ```bash
 fc
@@ -63,15 +63,15 @@ ls | grep .mp3 | wc -l
 ```
 __________________________________________________________________________________________________
 
-#### redirect or append the standerd output into a file
+#### Redirect or append the standerd output into a file
 
-for redirect the standedr output
+for redirect the standerd output
 ```bash
 ls >log.txt
 ```
 for append the standerd output
 ``` bash
-ls >>log.sh
+ls >>log.txt
 ```
 __________________________________________________________________________________________________
 #### Git clone with ssh Key
