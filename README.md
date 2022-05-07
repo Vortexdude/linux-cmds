@@ -33,6 +33,33 @@ ________________________________________________________________________________
 fc
 ```
 __________________________________________________________________________________________________
+#### Run the bash script that is place into the github
+
+``` bash
+wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file> | bash
+
+```
+So outputting to `-` will actually write the files content to `STDOUT` and then you simply pipe it to `bash` or whatever shell you prefer. If you script needs `sudo` rights you need to do `sudo bash` at the end so the line becomes:
+
+``` bash
+wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file> | sudo bash
+
+```
+
+##### Give arguement to the file
+
+``` bash
+wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file> | bash -s <arg>
+```
+##### Example
+
+```
+wget -O - https://raw.githubusercontent.com/vortexdude/src/main/script.sh | bash -s setup_role_dir
+
+```
+
+
+__________________________________________________________________________________________________
 
 #### Create folder structure
 ``` bash
