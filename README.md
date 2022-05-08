@@ -57,8 +57,12 @@ wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>
 wget -O - https://raw.githubusercontent.com/vortexdude/src/main/script.sh | bash -s setup_role_dir
 
 ```
+__________________________________________________________________________________________________
 
-
+#### Run VS code as sudo 
+``` bash
+sudo code --user-data-dir="~/.vscode-root"
+```
 __________________________________________________________________________________________________
 
 #### Create folder structure
