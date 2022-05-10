@@ -17,3 +17,13 @@ You will see the following in the file:
 nameserver xxx.xx.xx
 ```
 Change the nameserver value to `8.8.8.8` and save the file. You should now be able to connect to the internet.
+## OR
+Run the following command in the CMD
+
+```
+netsh winsock reset 
+netsh int ip reset all
+netsh winhttp reset proxy
+ipconfig /flushdns
+
+```
