@@ -58,6 +58,14 @@ wget -O - https://raw.githubusercontent.com/vortexdude/src/main/script.sh | bash
 
 ```
 __________________________________________________________________________________________________
+#### Run the any previous command with its number
+> Run the history command and copy command number and put the *!* mark before the number 
+``` bash
+history
+!123
+```
+
+__________________________________________________________________________________________________
 
 #### Run VS code as sudo 
 ``` bash
