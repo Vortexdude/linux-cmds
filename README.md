@@ -132,6 +132,21 @@ openssl passwrd -1 -salt name password
 > Where `name` is apeended on the hashed form and `password` is actual password
 
 __________________________________________________________________________________________________
+
+#### RPCInfo for the nfs server or ther stats for the server
+
+for localhost
+```
+rpcinfo -p 
+```
+
+for server
+``` bash
+rpcinfo -p <server_ip>
+```
+
+__________________________________________________________________________________________________
+
 #### Git clone with ssh Key
 
 ``` bash
