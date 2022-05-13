@@ -17,6 +17,8 @@ You will see the following in the file:
 nameserver xxx.xx.xx
 ```
 Change the nameserver value to `8.8.8.8` and save the file. You should now be able to connect to the internet.
+The `8.8.8.8` is the google dns server to resolve the dns names ffrom the local machines
+
 ## OR
 Run the following command in the CMD
 
@@ -27,3 +29,26 @@ netsh winhttp reset proxy
 ipconfig /flushdns
 
 ```
+# Mount failed with mount : permission denied by the server
+``` bash
+<hostname> mount: mount.nfs: access denied by server while mounting *.*.*.*:/home/share
+
+```
+
+### firstly check the nfs server is showing the exports
+``` bash
+showmount -e <servername>
+```
+### Include insecure option in /etc/exports on NFS server like below:
+
+``` bash
+# cat /etc/exports 
+/home/export *(rw,sync,no_root_squash,insecure)
+# exportfs -rav
+```
+### Check the status of the server
+``` bash
+rpcinfo -p <nfs-server-ip>
+```
+
+
