@@ -64,6 +64,15 @@ ________________________________________________________________________________
 history
 !123
 ```
+__________________________________________________________________________________________________
+##### Search the installed packed is exist or not
+``` bash
+apt list --installed | grep name
+```
+you can check the status of the command `0` for Not found and `1` for found
+``` bash
+apt list --installed | grep name | wc -l
+```
 
 __________________________________________________________________________________________________
 
