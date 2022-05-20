@@ -1,5 +1,13 @@
 # linux-cmds
+__________________________________________________________________________________________________
+#### You can use the patterns for ansible host to run the playbook
+``` yaml
+- hosts: Host1, Host2, Host
+- hosts: Groups1
+- hosts: Host*
+- hosts: *.company.com
 
+```
 __________________________________________________________________________________________________
 
 #### copy serched files with ls,cp and grep command
