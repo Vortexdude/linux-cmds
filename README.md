@@ -138,7 +138,12 @@ for append the standerd output
 ``` bash
 ls >>log.txt
 ```
+__________________________________________________________________________________________________
+#### Get the UUID of the partition
 
+``` bash
+lablk --fs /dev/sdb
+```
 __________________________________________________________________________________________________
 
 #### Generate hashed password with openssh
