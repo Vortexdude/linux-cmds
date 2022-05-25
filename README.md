@@ -1,4 +1,17 @@
 # linux-cmds
+
+_______________________________________________________________________________________________
+#### Remove the first character from the string via awk command
+``` bash
+cat /var/log/mail.log | grep 200 | awk -F' ' 'substr($13,2) > 200 {print $1}'
+
+```
+
+> Here substr() is the function to subsitute the charater from the variable
+This code is useful to subsitrute the first letter from the variable and check the condition of status is greater than 2000 and print that line
+
+_______________________________________________________________________________________________
+
 __________________________________________________________________________________________________
 #### You can use the patterns for ansible host to run the playbook
 ``` yaml
@@ -272,7 +285,6 @@ awk '{print $1}' FS=:
 
 awk 'BEGIN{FS=":"} {print $1}'
 ```
-_______________________________________________________________________________________________
 
 #### Unmount busy device forcefully
 ``` bash
