@@ -12,6 +12,51 @@ This code is useful to subsitrute the first letter from the variable and check t
 
 _______________________________________________________________________________________________
 
+#### Vim Commands
+> Exit and Save the file
+```
+Shift + zz
+```
+_______________________________________________________________________________________________
+#### Use advance mathmaticall expression in bash
+```
+(( expression ))
+```
+this is used for advance mathmatically operation
+```
+var ++
+val --
+++ var 
+-- val
+
+<<  left bitwise shift
+>> right bitwise shift
+
+&  bitwise and
+|  bitwise or
+&& logical and
+|| logical or
+```
+
+##### See the large content with only one page at a time by more command
+```
+ls -lah /etc | more
+```
+##### get the last line 
+```
+ls -lah /etc | tail -1 
+```
+##### get the first line 
+```
+ls -lah /etc | head -1 
+```
+
+Here -(hyphen) is represntas arguement like -f or -100 
+
+
+
+
+
 __________________________________________________________________________________________________
 #### You can use the patterns for ansible host to run the playbook
 ``` yaml
