@@ -1,6 +1,19 @@
 # linux-cmds
 
 _______________________________________________________________________________________________
+#### Grep Command 
+```
+grep -e pattern1 -e pattern2
+```
+> `-e` used for combine the logical OR orerator
+
+
+```
+grep 'pattern1.*pattern2'
+```
+> This is used for cobine the logical `AND` operator
+
+_______________________________________________________________________________________________
 #### Remove the first character from the string via awk command
 ``` bash
 cat /var/log/mail.log | grep 200 | awk -F' ' 'substr($13,2) > 200 {print $1}'
